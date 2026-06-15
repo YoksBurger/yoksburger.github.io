@@ -34,27 +34,27 @@ body{
   width:140px;height:140px;margin:0 auto 12px;
   border-radius:50%;
   background:#000;
-  box-shadow:0 0 0 3px #FF8C00, 0 0 30px rgba(255,140,0,0.5), 0 0 60px rgba(255,140,0,0.2);
+  box-shadow:0 0 0 3px #FFC700, 0 0 30px rgba(255,199,0,0.5), 0 0 60px rgba(255,199,0,0.2);
   animation: pulseGlow 3s ease-in-out infinite;
 }
 @keyframes pulseGlow{
-  0%,100%{box-shadow:0 0 0 3px #FF8C00, 0 0 30px rgba(255,140,0,0.5);}
-  50%{box-shadow:0 0 0 3px #FF8C00, 0 0 45px rgba(255,140,0,0.8), 0 0 80px rgba(255,140,0,0.3);}
+  0%,100%{box-shadow:0 0 0 3px #FFC700, 0 0 30px rgba(255,199,0,0.5);}
+  50%{box-shadow:0 0 0 3px #FFC700, 0 0 45px rgba(255,199,0,0.8), 0 0 80px rgba(255,199,0,0.3);}
 }
 .logo-wrap img{width:100%;height:100%;object-fit:contain;border-radius:50%;}
-h1{font-family:'Bangers',cursive;font-size:38px;letter-spacing:4px;color:#FF9900;
-  text-shadow:0 0 20px rgba(255,153,0,0.7), 2px 2px 0 #7a3c00;}
+h1{font-family:'Bangers',cursive;font-size:38px;letter-spacing:4px;color:#FFC700;
+  text-shadow:0 0 20px rgba(255,199,0,0.7), 2px 2px 0 #7a5c00;}
 .slogan{
   font-family:'Bangers',cursive;font-size:20px;letter-spacing:4px;
-  background:linear-gradient(90deg,#FF4500,#FF9900,#FF4500);
+  background:linear-gradient(90deg,#FFC700,#FFC700,#FFC700);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   margin:4px 0 10px;
 }
 .hours{
   display:inline-flex;align-items:center;gap:6px;
-  background:rgba(255,140,0,0.1);
-  border:1px solid rgba(255,140,0,0.4);
-  color:#FFD580;font-size:13px;
+  background:rgba(255,199,0,0.1);
+  border:1px solid rgba(255,199,0,0.4);
+  color:#FFC700;font-size:13px;
   padding:7px 18px;border-radius:30px;
   margin-bottom:28px;
 }
@@ -64,14 +64,14 @@ h1{font-family:'Bangers',cursive;font-size:38px;letter-spacing:4px;color:#FF9900
   display:flex;align-items:center;gap:10px;
   margin:22px 0 14px;
 }
-.divider span{color:#FF9900;font-size:11px;font-weight:700;letter-spacing:2px;white-space:nowrap;text-transform:uppercase;}
-.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(255,140,0,0.5),transparent);}
+.divider span{color:#FFC700;font-size:11px;font-weight:700;letter-spacing:2px;white-space:nowrap;text-transform:uppercase;}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(255,199,0,0.5),transparent);}
 
 /* BUTTONS */
 .btn{
   display:flex;align-items:center;
   background:linear-gradient(135deg,#1c1c1c,#252525);
-  border:1px solid rgba(255,140,0,0.25);
+  border:1px solid rgba(255,199,0,0.25);
   color:#fff;text-decoration:none;
   padding:15px 18px;border-radius:16px;
   margin-bottom:12px;
@@ -80,8 +80,8 @@ h1{font-family:'Bangers',cursive;font-size:38px;letter-spacing:4px;color:#FF9900
 }
 .btn:hover{
   transform:translateY(-3px);
-  border-color:#FF9900;
-  box-shadow:0 8px 25px rgba(255,153,0,0.3);
+  border-color:#FFC700;
+  box-shadow:0 8px 25px rgba(255,199,0,0.3);
 }
 .btn-icon{
   width:40px;height:40px;border-radius:12px;
@@ -91,16 +91,16 @@ h1{font-family:'Bangers',cursive;font-size:38px;letter-spacing:4px;color:#FF9900
 .btn-text{text-align:left;flex:1;}
 .btn-title{font-weight:700;font-size:15px;}
 .btn-sub{font-size:11px;color:#999;margin-top:2px;}
-.btn-arrow{color:#FF9900;font-size:18px;margin-left:8px;}
+.btn-arrow{color:#FFC700;font-size:18px;margin-left:8px;}
 
 /* Highlight button (menu) */
 .btn-highlight{
-  background:linear-gradient(135deg,#FF6600,#FF4500);
-  border-color:#FF6600;
+  background:linear-gradient(135deg,#FFC700,#FFC700);
+  border-color:#FFC700;
 }
-.btn-highlight .btn-title{color:#fff;}
-.btn-highlight .btn-sub{color:rgba(255,255,255,0.75);}
-.btn-highlight .btn-arrow{color:#fff;}
+.btn-highlight .btn-title{color:#000;}
+.btn-highlight .btn-sub{color:rgba(0,0,0,0.7);}
+.btn-highlight .btn-arrow{color:#000;}
 
 /* Platform row */
 .platform-row{display:flex;gap:10px;margin-bottom:0;}
@@ -112,9 +112,9 @@ h1{font-family:'Bangers',cursive;font-size:38px;letter-spacing:4px;color:#FF9900
 .platform-row .btn-title{font-size:13px;text-align:center;}
 
 /* MAP */
-.map-box{border-radius:16px;overflow:hidden;border:1px solid rgba(255,140,0,0.3);margin-bottom:8px;}
+.map-box{border-radius:16px;overflow:hidden;border:1px solid rgba(255,199,0,0.3);margin-bottom:8px;}
 .map-box iframe{width:100%;height:200px;border:0;display:block;}
-.address{font-size:12px;color:#FFD580;line-height:1.6;margin-bottom:8px;text-align:left;padding:0 4px;}
+.address{font-size:12px;color:#FFC700;line-height:1.6;margin-bottom:8px;text-align:left;padding:0 4px;}
 
 /* Floating WA */
 .wa-float{
@@ -138,14 +138,14 @@ h1{font-family:'Bangers',cursive;font-size:38px;letter-spacing:4px;color:#FF9900
   <div class="logo-wrap"><img src="assets/logo.png" alt="YoksBurger"></div>
   <h1>YOKSBURGER</h1>
   <div class="slogan">#DIETLUSA</div>
-  <div class="hours">⏰ Buka setiap hari &nbsp;·&nbsp; 14.00 – 22.30</div>
+  <div class="hours">⏰ Buka setiap hari &nbsp;·&nbsp; 13.00 – 22.30</div>
 
   <!-- Menu Button -->
   <a class="btn btn-highlight" href="menu.html">
     <div class="btn-icon">🍔</div>
     <div class="btn-text">
       <div class="btn-title">Lihat Menu Lengkap</div>
-      <div class="btn-sub">Burger · Hotdog · Babs · Fries · Paket</div>
+      <div class="btn-sub">Burger · Hotdog · Kebab · Fries · Paket</div>
     </div>
     <div class="btn-arrow">→</div>
   </a>
@@ -154,7 +154,7 @@ h1{font-family:'Bangers',cursive;font-size:38px;letter-spacing:4px;color:#FF9900
 
   <!-- WhatsApp -->
   <a class="btn" href="https://wa.me/6281266691686" target="_blank">
-    <div class="btn-icon" style="background:rgba(37,211,102,0.15);">
+    <div class="btn-icon" style="background:rgba(255,199,0,0.15);">
       <svg width="24" height="24" viewBox="0 0 32 32" fill="#25D366"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.837.741 5.5 2.041 7.823L0 32l8.349-2.013A15.92 15.92 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333c-2.578 0-5.052-.713-7.198-2.005l-.516-.307-4.953 1.193 1.226-4.829-.336-.529A13.276 13.276 0 012.667 16C2.667 8.64 8.64 2.667 16 2.667S29.333 8.64 29.333 16 23.36 29.333 16 29.333zm7.29-9.953c-.4-.2-2.36-1.164-2.726-1.297-.366-.133-.633-.2-.9.2-.266.4-1.033 1.297-1.266 1.564-.233.266-.466.3-.866.1-.4-.2-1.69-.624-3.22-1.99-1.19-1.06-1.993-2.37-2.226-2.77-.233-.4-.024-.617.176-.817.2-.2.4-.5.6-.75.2-.25.266-.43.4-.71.133-.283.066-.53-.033-.73-.1-.2-.9-2.16-1.233-2.96-.327-.78-.66-.674-.9-.687-.226-.013-.49-.013-.756-.013-.266 0-.7.1-1.066.5-.366.4-1.4 1.37-1.4 3.34s1.43 3.87 1.63 4.137c.2.266 2.74 4.18 6.64 5.69 3.9 1.51 3.9 1.01 4.6.94.7-.066 2.36-.96 2.69-1.89.333-.93.333-1.73.233-1.89-.1-.166-.366-.266-.766-.466z"/></svg>
     </div>
     <div class="btn-text">
@@ -186,7 +186,7 @@ h1{font-family:'Bangers',cursive;font-size:38px;letter-spacing:4px;color:#FF9900
 
   <div class="platform-row">
     <a class="btn" href="https://shopee.co.id/universal-link/now-food/shop/20288912?deep_and_deferred=1&shareChannel=copy_link" target="_blank">
-      <div class="btn-icon" style="background:rgba(255,100,0,0.15);">🛍️</div>
+      <div class="btn-icon" style="background:rgba(255,199,0,0.15);">🛍️</div>
       <div class="btn-title">ShopeeFood</div>
     </a>
     <a class="btn" href="https://gofood.link/a/D1pkm8S" target="_blank">
@@ -206,7 +206,7 @@ h1{font-family:'Bangers',cursive;font-size:38px;letter-spacing:4px;color:#FF9900
   </div>
   <div class="address">📍 FFPR+RW5, Jl. Bukit Barisan, Tengkerang Tim., Kec. Tenayan Raya, Kota Pekanbaru, Riau 28285</div>
   <a class="btn" href="https://maps.app.goo.gl/B67gca73ZAkCeUG4A" target="_blank">
-    <div class="btn-icon" style="background:rgba(255,140,0,0.15);">📍</div>
+    <div class="btn-icon" style="background:rgba(255,199,0,0.15);">📍</div>
     <div class="btn-text">
       <div class="btn-title">Buka di Google Maps</div>
       <div class="btn-sub">Dapatkan arah ke toko kami</div>
