@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YoksBurger - #DIETLUSA</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  min-height:100vh;
+  font-family:'Poppins',sans-serif;
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  padding:30px 16px 80px;
+  background:#0d0d0d;
+}
+.bg-layer{
+  position:fixed;top:0;left:0;right:0;bottom:0;
+  background:url('assets/bg.jpg') center/cover no-repeat;
+  z-index:0;
+}
+.bg-overlay{
+  position:fixed;top:0;left:0;right:0;bottom:0;
+  background:linear-gradient(180deg,rgba(0,0,0,0.7) 0%,rgba(10,5,0,0.92) 100%);
+  z-index:0;
+}
+
+.container{position:relative;z-index:1;width:100%;max-width:480px;text-align:center;}
+
+/* HEADER */
+.logo-wrap{
+  width:140px;height:140px;margin:0 auto 12px;
+  border-radius:50%;
+  background:#000;
+  box-shadow:0 0 0 3px #FFC700, 0 0 30px rgba(255,199,0,0.5), 0 0 60px rgba(255,199,0,0.2);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+@keyframes pulseGlow{
+  0%,100%{box-shadow:0 0 0 3px #FFC700, 0 0 30px rgba(255,199,0,0.5);}
+  50%{box-shadow:0 0 0 3px #FFC700, 0 0 45px rgba(255,199,0,0.8), 0 0 80px rgba(255,199,0,0.3);}
+}
+.logo-wrap img{width:100%;height:100%;object-fit:contain;border-radius:50%;}
+h1{font-family:'Bangers',cursive;font-size:38px;letter-spacing:4px;color:#FFC700;
+  text-shadow:0 0 20px rgba(255,199,0,0.7), 2px 2px 0 #7a5c00;}
+.slogan{
+  font-family:'Bangers',cursive;font-size:20px;letter-spacing:4px;
+  background:linear-gradient(90deg,#FFC700,#FFC700,#FFC700);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  margin:4px 0 10px;
+}
+.hours{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,199,0,0.1);
+  border:1px solid rgba(255,199,0,0.4);
+  color:#FFC700;font-size:13px;
+  padding:7px 18px;border-radius:30px;
+  margin-bottom:28px;
+}
+
+/* DIVIDER */
+.divider{
+  display:flex;align-items:center;gap:10px;
+  margin:22px 0 14px;
+}
+.divider span{color:#FFC700;font-size:11px;font-weight:700;letter-spacing:2px;white-space:nowrap;text-transform:uppercase;}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(255,199,0,0.5),transparent);}
+
+/* BUTTONS */
+.btn{
+  display:flex;align-items:center;
+  background:linear-gradient(135deg,#1c1c1c,#252525);
+  border:1px solid rgba(255,199,0,0.25);
+  color:#fff;text-decoration:none;
+  padding:15px 18px;border-radius:16px;
+  margin-bottom:12px;
+  transition:all 0.25s;
+  box-shadow:0 4px 15px rgba(0,0,0,0.4);
+}
+.btn:hover{
+  transform:translateY(-3px);
+  border-color:#FFC700;
+  box-shadow:0 8px 25px rgba(255,199,0,0.3);
+}
+.btn-icon{
+  width:40px;height:40px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-right:14px;font-size:22px;
+}
+.btn-text{text-align:left;flex:1;}
+.btn-title{font-weight:700;font-size:15px;}
+.btn-sub{font-size:11px;color:#999;margin-top:2px;}
+.btn-arrow{color:#FFC700;font-size:18px;margin-left:8px;}
+
+/* Highlight button (menu) */
+.btn-highlight{
+  background:linear-gradient(135deg,#FFC700,#FFC700);
+  border-color:#FFC700;
+}
+.btn-highlight .btn-title{color:#000;}
+.btn-highlight .btn-sub{color:rgba(0,0,0,0.7);}
+.btn-highlight .btn-arrow{color:#000;}
+
+/* Platform row */
+.platform-row{display:flex;gap:10px;margin-bottom:0;}
+.platform-row .btn{
+  flex:1;flex-direction:column;padding:14px 10px;
+  margin-bottom:0;justify-content:center;align-items:center;
+}
+.platform-row .btn-icon{margin-right:0;margin-bottom:4px;width:36px;height:36px;font-size:20px;}
+.platform-row .btn-title{font-size:13px;text-align:center;}
+
+/* MAP */
+.map-box{border-radius:16px;overflow:hidden;border:1px solid rgba(255,199,0,0.3);margin-bottom:8px;}
+.map-box img{width:100%;height:auto;display:block;}
+.address{font-size:12px;color:#FFC700;line-height:1.6;margin-bottom:8px;text-align:left;padding:0 4px;}
+
+/* Floating WA */
+.wa-float{
+  position:fixed;bottom:24px;right:20px;z-index:999;
+  width:56px;height:56px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,0.5);
+  text-decoration:none;
+  animation:bounce 2s ease-in-out infinite;
+}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+.wa-float svg{width:30px;height:30px;}
+</style>
+</head>
+<body>
+<div class="bg-layer"></div>
+<div class="bg-overlay"></div>
+
+<div class="container">
+  <div class="logo-wrap"><img src="assets/logo.png" alt="YoksBurger"></div>
+  <h1>YOKSBURGER</h1>
+  <div class="slogan">#DIETLUSA</div>
+  <div class="hours">⏰ Buka setiap hari &nbsp;·&nbsp; 13.00 – 22.30</div>
+
+  <!-- Menu Button -->
+  <a class="btn btn-highlight" href="menu.html">
+    <div class="btn-icon">🍔</div>
+    <div class="btn-text">
+      <div class="btn-title">Lihat Menu Lengkap</div>
+      <div class="btn-sub">Burger · Hotdog · Kebab · Fries · Paket</div>
+    </div>
+    <div class="btn-arrow">→</div>
+  </a>
+
+  <div class="divider"><span>Order Sekarang</span></div>
+
+  <!-- WhatsApp -->
+  <a class="btn" href="https://wa.me/6281266691686" target="_blank">
+    <div class="btn-icon" style="background:rgba(255,199,0,0.15);">
+      <svg width="24" height="24" viewBox="0 0 32 32" fill="#25D366"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.837.741 5.5 2.041 7.823L0 32l8.349-2.013A15.92 15.92 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333c-2.578 0-5.052-.713-7.198-2.005l-.516-.307-4.953 1.193 1.226-4.829-.336-.529A13.276 13.276 0 012.667 16C2.667 8.64 8.64 2.667 16 2.667S29.333 8.64 29.333 16 23.36 29.333 16 29.333zm7.29-9.953c-.4-.2-2.36-1.164-2.726-1.297-.366-.133-.633-.2-.9.2-.266.4-1.033 1.297-1.266 1.564-.233.266-.466.3-.866.1-.4-.2-1.69-.624-3.22-1.99-1.19-1.06-1.993-2.37-2.226-2.77-.233-.4-.024-.617.176-.817.2-.2.4-.5.6-.75.2-.25.266-.43.4-.71.133-.283.066-.53-.033-.73-.1-.2-.9-2.16-1.233-2.96-.327-.78-.66-.674-.9-.687-.226-.013-.49-.013-.756-.013-.266 0-.7.1-1.066.5-.366.4-1.4 1.37-1.4 3.34s1.43 3.87 1.63 4.137c.2.266 2.74 4.18 6.64 5.69 3.9 1.51 3.9 1.01 4.6.94.7-.066 2.36-.96 2.69-1.89.333-.93.333-1.73.233-1.89-.1-.166-.366-.266-.766-.466z"/></svg>
+    </div>
+    <div class="btn-text">
+      <div class="btn-title">WhatsApp</div>
+      <div class="btn-sub">081266691686 — chat langsung</div>
+    </div>
+    <div class="btn-arrow">→</div>
+  </a>
+
+  <!-- Instagram -->
+  <a class="btn" href="https://www.instagram.com/yoksburger_" target="_blank">
+    <div class="btn-icon" style="background:rgba(225,48,108,0.15);">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs>
+        <rect width="24" height="24" rx="6" fill="url(#ig)"/>
+        <circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.8" fill="none"/>
+        <circle cx="17" cy="7" r="1.2" fill="white"/>
+        <rect x="3" y="3" width="18" height="18" rx="5" stroke="white" stroke-width="1.8" fill="none"/>
+      </svg>
+    </div>
+    <div class="btn-text">
+      <div class="btn-title">Instagram</div>
+      <div class="btn-sub">@yoksburger_</div>
+    </div>
+    <div class="btn-arrow">→</div>
+  </a>
+
+  <div class="divider"><span>Pesan via Aplikasi</span></div>
+
+  <div class="platform-row">
+    <a class="btn" href="https://shopee.co.id/universal-link/now-food/shop/20288912?deep_and_deferred=1&shareChannel=copy_link" target="_blank">
+      <div class="btn-icon" style="background:rgba(255,199,0,0.15);">🛍️</div>
+      <div class="btn-title">ShopeeFood</div>
+    </a>
+    <a class="btn" href="https://gofood.link/a/D1pkm8S" target="_blank">
+      <div class="btn-icon" style="background:rgba(0,170,19,0.15);">🟢</div>
+      <div class="btn-title">GoFood</div>
+    </a>
+    <a class="btn" href="https://r.grab.com/g/6-20260608_112036_545e37382a90425cb1db758618a1571b_MEXMPS-6-C3AVCY4YV6AKAT" target="_blank">
+      <div class="btn-icon" style="background:rgba(0,177,79,0.15);">🚗</div>
+      <div class="btn-title">GrabFood</div>
+    </a>
+  </div>
+
+  <div class="divider"><span>Lokasi Kami</span></div>
+
+  <a class="map-box" href="https://maps.app.goo.gl/B67gca73ZAkCeUG4A" target="_blank" style="display:block;">
+    <img src="https://staticmap.openstreetmap.de/staticmap.php?center=0.4856,101.4830&zoom=16&size=600x300&maptype=mapnik&markers=0.4856,101.4830,red-pushpin" alt="Lokasi YoksBurger" style="width:100%;display:block;" onerror="this.parentElement.outerHTML='<div class=\'address\' style=\'text-align:center;margin-bottom:8px;\'><a href=\'https://maps.app.goo.gl/B67gca73ZAkCeUG4A\' target=\'_blank\' style=\'color:#FFC700;\'>📍 Lihat Peta Lokasi (klik di sini)</a></div>'">
+  </a>
+  <div class="address">📍 FFPR+RW5, Jl. Bukit Barisan, Tengkerang Tim., Kec. Tenayan Raya, Kota Pekanbaru, Riau 28285</div>
+  <a class="btn" href="https://maps.app.goo.gl/B67gca73ZAkCeUG4A" target="_blank">
+    <div class="btn-icon" style="background:rgba(255,199,0,0.15);">📍</div>
+    <div class="btn-text">
+      <div class="btn-title">Buka di Google Maps</div>
+      <div class="btn-sub">Dapatkan arah ke toko kami</div>
+    </div>
+    <div class="btn-arrow">→</div>
+  </a>
+
+  <div style="margin-top:40px;font-size:11px;color:#555;">© 2026 YoksBurger · Authentic Burger · #DIETLUSA</div>
+</div>
+
+<!-- Floating WhatsApp -->
+<a class="wa-float" href="https://wa.me/6281266691686" target="_blank">
+  <svg viewBox="0 0 32 32" fill="#fff"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.837.741 5.5 2.041 7.823L0 32l8.349-2.013A15.92 15.92 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm7.29 19.38c-.4-.2-2.36-1.164-2.726-1.297-.366-.133-.633-.2-.9.2-.266.4-1.033 1.297-1.266 1.564-.233.266-.466.3-.866.1-.4-.2-1.69-.624-3.22-1.99-1.19-1.06-1.993-2.37-2.226-2.77-.233-.4-.024-.617.176-.817.2-.2.4-.5.6-.75.2-.25.266-.43.4-.71.133-.283.066-.53-.033-.73-.1-.2-.9-2.16-1.233-2.96-.327-.78-.66-.674-.9-.687-.226-.013-.49-.013-.756-.013-.266 0-.7.1-1.066.5-.366.4-1.4 1.37-1.4 3.34s1.43 3.87 1.63 4.137c.2.266 2.74 4.18 6.64 5.69 3.9 1.51 3.9 1.01 4.6.94.7-.066 2.36-.96 2.69-1.89.333-.93.333-1.73.233-1.89-.1-.166-.366-.266-.766-.466z"/></svg>
+</a>
+</body>
+</html>
